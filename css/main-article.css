@@ -1,0 +1,496 @@
+#main-article {
+    /* display: none; */
+    margin: 0 auto;
+    width: 720px;
+    height: 700px;
+    /* background-color: pink; */
+    padding: 20px;
+    overflow-y: auto;
+
+}
+/* 隐藏滚动条 */
+#main-article::-webkit-scrollbar {
+    width: 0 !important
+}
+.mymain::-webkit-scrollbar {
+    width: 0 !important
+}
+.all-travel,
+.all-food,
+.all-fasion,
+.all-makeup,
+.all-efficient,
+.all-skincare {
+    display: none;
+
+}
+
+.abox,
+#abox,
+.f-abox {
+    display: inline;
+    position: relative;
+    float: left;
+    width: 315px;
+    /* height: 480px; */
+    border: 1px solid grey;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0px 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.mybox,
+.collectbox,
+.othersbox {
+    position: relative;
+    float: left;
+    width: 315px;
+    border: 1px solid grey;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 0px 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.impgpart {
+    display: block;
+    width: 260px;
+    height: 350px;
+    height: 400px;
+    margin-top: 15px;
+}
+
+.word {
+    margin-left: 5px;
+    display: block;
+    width: 315px;
+    height: 125px;
+    font-size: 20px;
+    /* color: antiquewhite;  */
+    overflow: hidden;
+}
+
+.author-avatar {
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+.author {
+    position: absolute;
+    left: 75px;
+    bottom: 30px;
+}
+
+/* 点赞功能 */
+.loveicon,
+#loveicon {
+    font-family: 'icomoon';
+    position: absolute;
+    bottom: 28px;
+    right: 60px;
+    color: rgb(181, 200, 217);
+    font-size: 20px;
+}
+
+.lovenum {
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+    color: rgb(105, 175, 236);
+    font-size: 20px;
+}
+
+/* 文章的详细页面 */
+#e-all,
+.e-myarticle,
+.e-zanguo,
+.e-collect {
+    overflow-y: auto;
+    all: unset;
+    /* display: none; */
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 740px;
+    /* height: 980px; */
+    /* background-color: pink; */
+    z-index: 10000000000000000;
+}
+
+.e-all-top,
+.pe-alltop {
+    position: relative;
+    height: 75px;
+    width: 740px;
+    /* background-color: skyblue; */
+}
+
+.e-share,
+.pe-share {
+    margin-top: 20px;
+    margin-right: 10px;
+    font-family: 'icomoon';
+    float: right;
+    padding-top: 5px;
+    width: 30px;
+    height: 40px;
+    font-size: 28px;
+}
+
+.pe-backpersonal,
+.oe-backpersonal,
+#e-backhome,
+.sc-backpersonal {
+    position: absolute;
+    left: 35px;
+    top: 20px;
+    font-family: 'icomoon';
+    font-size: 35px;
+    color: #4e4e4e;
+}
+
+/* 文章详情的头像 */
+.e-avatar,
+.pe-avatar,
+#e-avatar {
+    position: absolute;
+    top: 15px;
+    left: 100px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+/* 作者昵称 */
+.e-author,
+.pe-author {
+    position: absolute;
+    top: 20px;
+    left: 150px;
+    font-size: 25px;
+}
+
+.e-follow,
+.pe-follow {
+    position: absolute;
+    background-color: rgb(240, 87, 41);
+    top: 20px;
+    right: 60px;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+/* 盒子轮播 */
+#hiddenit {
+    width: 740px;
+    height: 520px;
+    overflow: hidden !important;
+}
+
+#circle {
+    position: absolute;
+    float: left;
+    left: 320px;
+    top: 550px;
+    list-style: none;
+    /* background-color: #fff; */
+}
+
+/* 轮播图小点 */
+#circle li {
+    cursor: pointer;
+    float: left;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+/* 当前选中的小点 */
+.current {
+    background-color: #fc694e !important;
+    width: 20px !important;
+    height: 12px !important;
+    border-radius: 5px !important;
+}
+
+#scroll {
+    position: absolute;
+    width: 1000%;
+    height: 520px;
+    overflow: hidden;
+}
+
+.li-scroll {
+    float: left;
+    width: 740px;
+    height: 520px;
+    overflow: hidden;
+}
+
+.e-picbox {
+    width: 740px;
+    height: 520px;
+    overflow: hidden;
+}
+
+/* 大图 */
+.main-pic {
+    float: left;
+    width: 740px;
+    height: 520px;
+
+}
+
+.e-databox {
+    width: 740px;
+    height: 210px;
+    margin-bottom: 15px;
+    position: relative;
+    border-bottom: 1px solid rgb(167, 150, 150);
+}
+
+/* 标题 */
+.e-title {
+    width: 740px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 23px;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+/* 内容 */
+.e-content {
+    width: 710px;
+    height: 60px;
+    line-height: 45px;
+    font-size: 20px;
+    margin-left: 20px;
+    overflow: auto;
+}
+
+/* 标签 */
+.e-tag {
+    margin-top: 10px;
+    font-size: 18px;
+    margin-left: 30px;
+    color: blueviolet;
+}
+
+/* 日期 */
+.e-date {
+    margin-top: 25px;
+    font-size: 18px;
+    margin-left: 30px;
+}
+
+.e-dislike,
+.e-delete {
+    font-family: 'icomoon';
+    position: absolute;
+    width: 130px;
+    height: 50px;
+    right: 20px;
+    bottom: 5px;
+    font-size: 18px;
+    border-radius: 30px;
+}
+
+/* 评论1-2 */
+.e-commentall {
+    position: relative;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    width: 740px;
+    height: 110px;
+}
+
+/* 评论1 */
+.e-comment1 {
+    position: relative;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    width: 740px;
+    height: 50px;
+}
+
+.e-comment1-avatar {
+    margin-left: 10px;
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+}
+
+/* 评论1输入框 */
+.e-input1 {
+    position: absolute;
+    padding-left: 15px;
+    bottom: 16px;
+    right: 130px;
+    width: 520px;
+    height: 40px;
+    /* border: none; */
+    border-radius: 30px;
+}
+
+/* 评论2 */
+.e-comment2 {
+    position: fixed;
+    bottom: 0px;
+    /* margin-top: 10px; */
+    padding-bottom: 10px;
+    width: 740px;
+    height: 60px;
+    background-color: #fff;
+}
+
+/* 评论2输入框 */
+.e-input2 {
+    margin-left: 20px;
+    padding-left: 10px;
+    height: 45px;
+    width: 470px;
+    border-radius: 30px;
+    font-size: 18px;
+}
+
+/* 评论框右侧图标 */
+#ec-icon {
+    font-family: 'icomoon';
+    font-size: 22px;
+    margin-right: 10px;
+}
+/* 发表评论按钮 */
+#sent-review{
+    position: absolute;
+    right: 10px;
+    width: 105px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #ef7070;
+}
+.e-input2::placeholder {
+    font-family: 'icomoon';
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+/* 收藏变黄 */
+.toyellow {
+    color: yellow;
+}
+
+/* 设置评论样式 */
+.eachcomment {
+    position: relative;
+    width: 740px;
+    padding-top: 90px;
+}
+.ej-eachcomment{
+    position: relative;
+    width: 740px;
+    height: 80px;
+}
+
+.commentor-avatar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+.ej-commentor-avatar {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+.commentor-name {
+    position: absolute;
+    top: 10px;
+    left: 70px;
+    color: #7c7a7a;
+}
+.ej-commentor-name {
+    position: absolute;
+    top: 10px;
+    left: 100px;
+    color: #7c7a7a;
+}
+
+.comment-main {
+    position: absolute;
+    top: 32px;
+    left: 70px;
+    font-size: 18px;
+}
+
+.ej-comment-main {
+    position: absolute;
+    top: 32px;
+    left: 100px;
+    font-size: 16px;
+}
+
+.comment-date {
+    position: absolute;
+    top: 60px;
+    left: 70px;
+    color: #7c7a7a;
+}
+.ej-comment-date {
+    position: absolute;
+    top: 60px;
+    left: 100px;
+    color: #7c7a7a;
+}
+
+.comment-love {
+    font-family: 'icomoon';
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 25px;
+    color: blanchedalmond;
+}
+
+.comment-lovenum {
+    position: absolute;
+    right: 22px;
+    top: 45px;
+}
+/* 二级评论框 */
+#mark-input{
+    display: none;
+    position: fixed;
+    bottom: 0px;
+    width: 740px;
+    height: 400px;
+    background-color: rgba(0,0,0,.3);
+    z-index: 999;
+}
+.child-review{
+    border-radius: 20px;
+    width: 580px;
+    height: 45px;
+    z-index: 999;
+}
+.sentchildreview{
+    float: right;
+    margin-top: 6px;
+    width: 100px;
+    height: 35px;
+    border-radius: 15px;
+    z-index: 999;
+}

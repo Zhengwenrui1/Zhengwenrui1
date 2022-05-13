@@ -1,0 +1,115 @@
+/* 清除边距 */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 设置主页 */
+.homepart,
+.create{
+    display: none;
+    position: relative;
+    margin: 0 auto;
+    width: 740px;
+    /* height: 1200px; */
+    /* background-color: pink; */
+}
+.allchat{
+    /* display: none; */
+    position: relative;
+    margin: 0 auto;
+    width: 740px;
+    /* height: 1200px; */
+    /* background-color: pink; */
+}
+.homepart-top,
+.create-top{
+    position: relative;
+    height: 80px;
+    width: 100%;
+}
+/* 首页和tab框定位在顶部 */
+.topfixed-box{
+    width: 740px;
+    height: 130px;
+    /* position: fixed;
+    top: 0; */
+    z-index: 5;
+    display: block;
+    background-color: #fff;
+}
+  /*顶部字体图标样式设置  */
+.add,.search{
+    font-family: 'icomoon';
+    font-size: 25px;
+    color: #4e4e4e;
+}
+/* 定位顶部字体图标 */
+.add{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+.search{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+/* 首页字体定位和样式 */
+.shouye{
+    position: absolute;
+    top: 25px;
+    left: 340px;
+    color: #626262;
+    font-size: 24px;
+}
+/* 设置tag部分 */
+.all-tag{
+    display: flex;
+    justify-content: space-around;
+}
+/* 每一个tag */
+.eachtag{
+    font-size: 22px;
+}
+/* 当前选中的tag样式 */
+.tag-current{
+    padding-bottom: 15px;
+    color: #a56bd6;
+    border-bottom: #a56bd6 solid;
+}
+/* 主页底部的设置 */
+.bottomfixed-box{
+    width: 740px;
+    height: 90px;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+}
+.gethigh{
+    height: 90px;
+    width: 740px;
+    display: block;
+}
+.homepart-bottom{
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    height: 90px;
+}
+/* 首页底部每一个tag */
+.bottomtag{
+    font-family: 'icomoon';
+    font-size: 22px;
+    color: #4e4e4e;
+    padding-top: 15px;
+}
+.bottomtag>p{
+    margin-bottom: 10px;
+}
+.icon-b{
+    font-size: 25px;
+}
+/* 底部tag的当前选中状态 */
+.tag-current-b{
+    color: #b181dc;
+}

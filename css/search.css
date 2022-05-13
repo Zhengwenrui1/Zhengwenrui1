@@ -1,0 +1,457 @@
+.all-search {
+    display: none;
+    position: relative;
+    margin: 0 auto;
+    width: 780px;
+    height: 1000px;
+    /* background-color: skyblue; */
+}
+
+/* 顶部设定 */
+.search-top {
+    position: relative;
+    height: 80px;
+    width: 740px;
+}
+
+/* 设置返回键 */
+.backbtn-search {
+    position: absolute;
+    left: 35px;
+    top: 20px;
+    font-family: 'icomoon';
+    font-size: 28px;
+    color: #4e4e4e;
+}
+
+/* 设置输入框 */
+.inputsuarch::placeholder {
+    font-family: 'icomoon';
+    font-size: 25px;
+}
+
+.inputsearch {
+    font-family: 'icomoon';
+    position: absolute;
+    padding-left: 15px;
+    top: 15px;
+    left: 80px;
+    width: 500px;
+    height: 50px;
+    outline: none;
+    border-radius: 10px;
+    border: solid 1px purple;
+    background-color: transparent;
+    font-size: 25px;
+    /* color: #fff; */
+}
+
+/* 搜索 */
+.searchbtn {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    width: 95px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+/* tag */
+.article-user {
+    width: 740px;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    line-height: 60px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.s-current {
+    padding-bottom: 15px;
+    color: #a56bd6;
+    border-bottom: #a56bd6 solid;
+}
+
+/* 搜索文章渲染 */
+#s-main {
+    margin: 0 auto;
+    width: 740px;
+    height: 800px;
+    /* background-color: pink; */
+    padding: 20px;
+    overflow-y: auto;
+    text-align: center;
+    color: #a8a4a1;
+}
+
+.s-abox {
+    position: relative;
+    float: left;
+    width: 315px;
+    height: 480px;
+    border: 1px solid grey;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: 15px;
+}
+
+.s-mybox {
+    position: relative;
+    float: left;
+    width: 315px;
+    /* height: 480px; */
+    border: 1px solid grey;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: 15px;
+}
+
+.s-impgpart {
+    display: block;
+    width: 260px;
+    height: 350px;
+    height: 400px;
+    margin-top: 15px;
+}
+
+.s-word {
+    margin-left: 5px;
+    display: block;
+    width: 315px;
+    height: 50px;
+    font-size: 20px;
+    text-align: left;
+    color: black;
+    overflow: hidden;
+}
+
+.s-author-avatar {
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.s-author {
+    position: absolute;
+    left: 75px;
+    bottom: 30px;
+}
+
+/* 点赞功能 */
+.s-loveicon {
+    font-family: 'icomoon';
+    position: absolute;
+    bottom: 30px;
+    right: 60px;
+    color: rgb(181, 200, 217);
+}
+
+.s-lovenum {
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+    color: rgb(105, 175, 236);
+    font-size: 20px;
+}
+
+/* 具体页面 */
+
+/* 文章的详细页面 */
+.se-all {
+    overflow: hidden !important;
+    all: unset;
+    /* display: none; */
+    position: relative;
+    margin: 0 auto;
+    width: 740px;
+    height: 980px;
+    /* background-color: pink; */
+    z-index: 10000000000000000;
+}
+
+.se-all-top {
+    position: relative;
+    height: 75px;
+    width: 740px;
+    /* background-color: skyblue; */
+}
+
+.se-share {
+    margin-top: 20px;
+    margin-right: 10px;
+    font-family: 'icomoon';
+    float: right;
+    padding-top: 5px;
+    width: 30px;
+    height: 40px;
+    font-size: 28px;
+}
+
+.se-backsearch {
+    position: absolute;
+    left: 35px;
+    top: 20px;
+    font-family: 'icomoon';
+    font-size: 35px;
+    color: #4e4e4e;
+}
+
+/* 文章详情的头像 */
+.se-avatar {
+    position: absolute;
+    top: 15px;
+    left: 100px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+/* 作者昵称 */
+.se-author {
+    position: absolute;
+    top: 20px;
+    left: 150px;
+    font-size: 25px;
+}
+
+.se-follow {
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.se-picbox {
+    width: 740px;
+    height: 520px;
+}
+
+/* 大图 */
+.smain-pic {
+    width: 740px;
+    height: 520px;
+
+}
+
+.se-databox {
+    width: 740px;
+    height: 210px;
+    margin-bottom: 15px;
+    position: relative;
+    border-bottom: 1px solid rgb(167, 150, 150);
+}
+
+/* 标题 */
+.se-title {
+    width: 740px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 23px;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+/* 内容 */
+.se-content {
+    width: 710px;
+    height: 60px;
+    line-height: 45px;
+    font-size: 20px;
+    margin-left: 20px;
+    overflow: auto;
+}
+
+/* 标签 */
+.se-tag {
+    margin-top: 10px;
+    font-size: 18px;
+    margin-left: 30px;
+    color: blueviolet;
+}
+
+/* 日期 */
+.se-date {
+    margin-top: 25px;
+    font-size: 18px;
+    margin-left: 30px;
+}
+
+.se-dislike {
+    font-family: 'icomoon';
+    position: absolute;
+    width: 130px;
+    height: 50px;
+    right: 20px;
+    bottom: 5px;
+    font-size: 18px;
+    border-radius: 30px;
+}
+
+/* 评论1-2 */
+.se-commentall {
+    position: relative;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    width: 740px;
+    height: 110px;
+}
+
+/* 评论1 */
+.se-comment1 {
+    position: relative;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    width: 740px;
+    height: 50px;
+}
+
+.se-comment1-avatar {
+    margin-left: 10px;
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+}
+
+/* 评论1输入框 */
+.se-input1 {
+    position: absolute;
+    padding-left: 15px;
+    bottom: 10px;
+    right: 10px;
+    width: 645px;
+    height: 40px;
+    border: none;
+    border-radius: 30px;
+}
+
+/* 评论2 */
+.se-comment2 {
+    position: relative;
+    /* margin-top: 10px; */
+    padding-bottom: 10px;
+    width: 740px;
+    height: 60px;
+}
+
+/* 评论2输入框 */
+.se-input2 {
+    margin-left: 20px;
+    padding-left: 10px;
+    height: 45px;
+    width: 470px;
+    border-radius: 30px;
+    font-size: 18px;
+}
+
+/* 评论框右侧图标 */
+#sec-icon {
+    font-family: 'icomoon';
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.se-input2::placeholder {
+    font-family: 'icomoon';
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+/* 搜索的用户渲染 */
+.s-auser,
+.f-auser,
+.lt-auser,
+#robot {
+    position: relative;
+    width: 740px;
+    height: 90px;
+    padding: 10px 0 10px;
+    /* background-color: pink; */
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+/* 用户头像 */
+.s-useravarar,
+.f-useravatar {
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+}
+
+.robot-useravatar {
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+}
+
+/* 用户昵称 */
+.s-username,
+.f-username {
+    position: absolute;
+    display: block;
+    top: 30px;
+    left: 130px;
+    font-size: 22px;
+}
+
+/* 用户简介 */
+.s-descript {
+    position: absolute;
+    display: block;
+    top: 60px;
+    left: 130px;
+    font-size: 20px;
+    color: #b8b8b8;
+}
+
+.s-guanzhu,
+.s-yiguanzhu,
+.f-yiguanzhu {
+    position: absolute;
+    top: 35px;
+    right: 45px;
+    font-size: 16px;
+    padding: 0 20px;
+    /* width: 100px; */
+    height: 50px;
+    color: #a56bd6;
+    border: #a56bd6 solid;
+    border-radius: 5px;
+}
+
+.mid-yiguanzhu {
+    position: absolute;
+    top: 35px;
+    right: 45px;
+    font-size: 16px;
+    padding: 0 20px;
+    /* width: 100px; */
+    height: 50px;
+    color: #a56bd6;
+    border: #a56bd6 solid;
+    border-radius: 5px;
+}
+
+.faxiaoxi {
+    position: absolute;
+    top: 35px;
+    right: 45px;
+    font-size: 16px;
+    padding: 0 20px;
+    /* width: 100px; */
+    height: 50px;
+    border-radius: 5px;
+}

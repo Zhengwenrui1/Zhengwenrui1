@@ -1,0 +1,190 @@
+.all-personal {
+    display: none;
+    position: relative;
+    margin: 0 auto;
+    width: 740px;
+    height: 1000px;
+    /* background-color: pink; */
+}
+.other-personal{
+    display: none;
+    position: relative;
+    margin: 0 auto;
+    width: 740px;
+    height: 1000px;
+}
+
+/* 设置顶部 */
+.personal-top {
+    position: relative;
+    height: 50px;
+    width: 740px;
+    /* background-color: skyblue; */
+}
+
+/* 登出按键 */
+.logout {
+    margin-top: 5px;
+    margin-left: 10px;
+    font-family: 'icomoon';
+    float: left;
+    padding-left: 10px;
+    padding-top: 5px;
+    width: 30px;
+    height: 50px;
+    font-size: 25px;
+}
+
+/* 分享按键 */
+.share {
+    margin-top: 5px;
+    margin-right: 10px;
+    font-family: 'icomoon';
+    float: right;
+    padding-top: 5px;
+    width: 30px;
+    height: 50px;
+    font-size: 28px;
+}
+
+/* 个人中心 头像和名称 */
+.avatar-name {
+    position: relative;
+    width: 740px;
+    height: 150px;
+    /* background-color: blue; */
+}
+
+/* 设置头像 */
+.myavatar {
+    margin-left: 35px;
+    margin-top: 25px;
+    width: 130px;
+    height: 130px;
+    border-radius: 65px;
+    /* background-color: green; */
+}
+
+#avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 65px;
+}
+
+/* 昵称 */
+.p-username {
+    position: absolute;
+    top: 75px;
+    left: 215px;
+    width: 100px;
+    height: 30px;
+    font-size: 25px;
+    /* background-color: purple; */
+}
+
+/* 关注 粉丝 点赞收藏 */
+.three-data {
+    display: flex;
+    justify-self: start;
+    padding-left: 50px;
+    width: 700px;
+    height: 100px;
+    color: #b5aca5;
+    /* background-color: skyblue; */
+}
+
+.three-data>span {
+    display: block;
+}
+
+#p-data {
+    margin-top: 30px;
+    width: 100px;
+    height: 80px;
+    font-size: 16px;
+}
+
+/* 设置三个数字 */
+#p-datanum {
+    font-size: 25px;
+}
+
+/* 编辑资料按钮 */
+.edit-btn {
+    position: absolute;
+    right: 180px;
+    top: 250px;
+    width: 140px;
+    height: 48px;
+    border-radius: 8px;
+    font-size: 17px;
+    ;
+}
+
+/* 设置底部 */
+.p-homepart-bottom {
+    margin-left: 0;
+    width: 740px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+}
+
+/* 个人中心的三个标签盒子 */
+.person-tag {
+    display: flex;
+    justify-content: space-around;
+    width: 740px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 23px;
+    /* background-color: skyblue; */
+}
+
+/* 选中状态 */
+.p-tag-current {
+    color: #af77d7;
+    border-bottom: 4px solid #af77d7;
+}
+
+.givehigh {
+    width: 740px;
+    height: 180px;
+}
+
+/* 笔记部分 */
+#addmyarticle,#addzanguo,.addcollect 
+,#addcollect{
+    display: flex;
+    justify-self: space-around;
+    display: block;
+    width: 740px;
+    height: 500px;
+    /* background-color: blue; */
+    overflow-y: auto;
+}
+.topink{
+    color: pink !important;
+}
+/* 关注的用户渲染 */
+.attention-main,.fans-main{
+    margin: 0 auto;
+    width: 740px;
+    height: 800px;
+    /* background-color: pink; */
+    overflow-y: auto; 
+}
+/* 删除我的文章按钮 */
+.deletearticle{
+    position: absolute;
+    right: 15px;
+    bottom: 100px;
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    padding-bottom: 2px;
+    background-color: red;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+}

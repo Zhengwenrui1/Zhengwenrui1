@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<link href="css/login.css" rel="stylesheet" type="text/css" />
+<link href="css/homepart.css" rel="stylesheet" type="text/css" />
+<link href="css/write.css" rel="stylesheet" type="text/css" />
+<link href="css/search.css" rel="stylesheet" type="text/css" />
+<link href="css/mymessage.css" rel="stylesheet" type="text/css" />
+<link href="css/person.css" rel="stylesheet" type="text/css" />
+<link href="css/edit.css" rel="stylesheet" type="text/css" />
+<link href="css/attention.css" rel="stylesheet" type="text/css" />
+<link href="css/fans.css" rel="stylesheet" type="text/css" />
+<link href="css/praise.css" rel="stylesheet" type="text/css" />
+<link href="css/comment.css" rel="stylesheet" type="text/css" />
+<link href="css/main-article.css" rel="stylesheet" type="text/css" />
+<link href="icomoon/icon.css" rel="stylesheet" type="text/css" />
+
+<script src="js/myajax.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="js/login.js"></script>
+<script src="js/homepart.js"></script>
+<script src="js/writepart.js"></script>
+<script src="js/search.js"></script>
+<script src="js/personal.js"></script>
+<script src="js/edit.js"></script>
+<script src="js/attention.js"></script>
+<script src="js/fans.js"></script>
+<script src="js/praise.js"></script>
+<script src="js/mymessage.js"></script>
+<script src="js/comment.js"></script>
+<script src="js/animate.js"></script>
+<script type=“text/javascript” defer="true"></script>
+<script src="https://cdn.socket.io/4.5.0/socket.io.min.js"
+    integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous">
+    </script>
+
+<body>
+    <!-- 登录页面 -->
+    <div class="alllogin">
+        <p class="big-title">欢迎来到小红书 <br>&ensp;一起引领潮流</p>
+        <div class="username-box">
+            <input type="text" id="username" placeholder="请输入账号">
+        </div>
+        <div class="pwd-box">
+            <input type="password" id="pwd" placeholder="请输入密码">
+        </div>
+        <!-- <div class="accept-box">
+            <input type="radio">
+        </div> -->
+        <button class="login-btn" id="denglu">登录</button>
+    </div>
+
+    <!-- 首页页面 -->
+    <!-- 首页顶部 -->
+    <div class="homepart">
+        <div class="topfixed-box">
+            <div class="homepart-top">
+                <span class="add"></span>
+                <p class="shouye">首页</p>
+                <span class="search"></span>
+            </div>
+            <!-- tag部分 -->
+            <div class="all-tag">
+                <span class="eachtag tag-current" id="tuijian">推荐</span>
+                <span class="eachtag" id="lvxing">旅行</span>
+                <span class="eachtag" id="meishi">美食</span>
+                <span class="eachtag" id="shishang">时尚</span>
+                <span class="eachtag" id="caizhuang">彩妆</span>
+                <span class="eachtag" id="gaoxiao">高效</span>
+                <span class="eachtag" id="hufu">护肤</span>
+            </div>
+        </div>
+
+        <!-- 推荐版块html -->
+        <div class="all-recommend" id="main-article">
+
+        </div>
+        <!-- 旅行版块html -->
+        <div class="all-travel" id="main-article">
+        </div>
+        <!-- 美食版块html -->
+        <div class="all-food" id="main-article">
+        </div>
+        <!-- 时尚版块html -->
+        <div class="all-fasion" id="main-article">
+        </div>
+        <!-- 彩妆版块html -->
+        <div class="all-makeup" id="main-article">
+        </div>
+        <!-- 高效版块html -->
+        <div class="all-efficient" id="main-article">
+        </div>
+        <!-- 护肤版块html -->
+        <div class="all-skincare" id="main-article">
+        </div>
+
+        <!-- homepart底部 -->
+        <div class="gethigh">
+            <div class="bottomfixed-box" style="display: block">
+                <div class="homepart-bottom">
+                    <div class="bottomtag tag-current-b">
+                        <p class="icon-b">&ensp;</p>
+                        <p> 首页</p>
+                    </div>
+                    <div class="bottomtag goto-message">
+                        <p class="icon-b ">&ensp;&ensp;</p>
+                        <p>我的消息</p>
+                    </div>
+                    <div class="bottomtag goto-person">
+                        <p class="icon-b">&ensp;&ensp;</p>
+                        <p>个人中心</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 文章详情 -->
+    <div class="each-recommend" style="display: none;">
+    </div>
+    <div class="each-travel" style="display: none;">
+    </div>
+    <div class="each-food" style="display: none;">
+    </div>
+    <div class="each-fasion" style="display: none;">
+    </div>
+    <div class="each-makeup" style="display: none;">
+    </div>
+    <div class="each-efficient" style="display: none;">
+    </div>
+    <div class="each-skincare" style="display: none;">
+    </div>
+    <!-- 他人主页的详情页面 -->
+    <div class="each-pprecommend" style="display: none;">
+    </div>
+    <div class="each-pptravel" style="display: none;">
+    </div>
+    <div class="each-ppfood" style="display: none;">
+    </div>
+    <div class="each-ppfasion" style="display: none;">
+    </div>
+    <div class="each-ppmakeup" style="display: none;">
+    </div>
+    <div class="each-ppefficient" style="display: none;">
+    </div>
+    <div class="each-ppskincare" style="display: none;">
+    </div>
+    <!-- 写文章页面 -->
+    <div class="all-write">
+        <div class="write-top"><span class="backbtn"></span></div>
+        <div class="add-pic">
+            <input type="file" name="" id="pic-file" style="display:none">
+            <div @click="handleSelectFile" class="pic-box">+</div>
+            <div class="todelete"></div>
+
+        </div>
+        <input type="text" class="add-tit" placeholder="填写标题会有更多赞哦~">
+        <!-- 添加正文 -->
+        <textarea name="" id="add-main" cols="60" rows="40" placeholder="添加正文..."></textarea>
+        <div class="twosmall-tag-box">
+            <div class="small-tag tag-topic"># 话题</div>
+            <div class="small-tag tag-user">@ 用户</div>
+            <span class="addtopic">+</span>
+            <span class="guanbi-topic">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;x</span>
+        </div>
+        <div class="topicpart">
+            <!-- 添加话题 -->
+            <!-- <div class="eachtopicbox"><span class="jinhao">#</span><input type="text" id="topic"class="atag" value=""></div> -->
+        </div>
+        <div class="userpart" style="display: none">
+            <!-- 添加话题 -->
+            <!-- <input type="text" id="usertag" class="u-atag" value="@">
+            <input type="text" id="topic" class="u-atag" value="@">
+            <input type="text" id="topic" class="u-atag" value="@"> -->
+        </div>
+        <!-- 用户 -->
+        <!-- 发布笔记 -->
+        <button class="send-note">发布笔记</button>
+    </div>
+    <!-- 搜索页面 -->
+    <div class="all-search">
+        <div class="search-top">
+            <span class="backbtn-search"></span>
+            <input type="text" name="" id="" class="inputsearch" placeholder="  请输入内容">
+            <button class="searchbtn">搜索</button>
+        </div>
+        <!-- tag -->
+        <div class="article-user">
+            <span class="s-article s-current">文章</span>
+            <span class="s-user">用户</span>
+        </div>
+        <!-- 搜索的文章预览 -->
+        <div class="search-article" id="s-main">
+            <!--  html-->
+        </div>
+        <!-- 搜索的用户预览 -->
+        <div class="search-user" style="display:none" id="s-main">
+            <!-- html -->
+        </div>
+    </div>
+    <!-- 搜索的文章详情页面 -->
+    <div class="each-sarticle">
+        <!-- html2 -->
+    </div>
+    <!-- 搜索的用户详情页面 -->
+    <!-- 我的消息页面 -->
+    <div class="all-mymessage">
+        <!-- 顶部设置 -->
+        <div class="mymessage-top">
+            <span class="mymessage-tit">消息</span>
+            <span class="createchat">创建聊天</span>
+        </div>
+        <!-- 中间三个按钮 -->
+        <div class="mymessage-tag">
+            <div class="each-mymessage-tag" id="m-gotocollect">
+                <span class="heart" id="icon-message"></span>
+                <span class="heartword" id="tagword-message">赞和收藏</span>
+            </div>
+            <div class="each-mymessage-tag m-gotoattention">
+                <span class="newattention " id="icon-message"></span>
+                <span class="newattentionword" id="tagword-message">新增关注</span>
+            </div>
+            <div class="each-mymessage-tag m-gotocomment">
+                <span class="comment" id="icon-message"></span>
+                <span class="commentword" id="tagword-message">评论和@</span>
+            </div>
+        </div>
+        <div class="chatlist">
+
+        </div>
+
+
+
+        <!-- 底部设置 -->
+        <div class="bottomfixed-box" style="display: block">
+            <div class="homepart-bottom">
+                <div class="bottomtag goto-homepart">
+                    <p class="icon-b">&ensp;</p>
+                    <p> 首页</p>
+                </div>
+                <div class="bottomtag tag-current-b goto-message">
+                    <p class="icon-b">&ensp;&ensp;</p>
+                    <p>我的消息</p>
+                </div>
+                <div class="bottomtag " id="goto-person">
+                    <p class="icon-b">&ensp;&ensp;</p>
+                    <p>个人中心</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 收到的评论页面 -->
+    <div class="all-comment">
+        <div class="comment-top">
+            <span class="backbtn-comment"></span>
+            <span class="comment-tit">收到的评论和@</span>
+        </div>
+        <div class="reviewme"></div>
+    </div>
+
+    <!-- 个人中心页面 -->
+    <div class="all-personal">
+        <div class="personal-top">
+            <span class="logout"></span>
+            <span class="share"></span>
+        </div>
+        <!-- 个人中心头像-和名称 -->
+        <div class="avatar-name">
+            <input type="file" id="avatar-file" style="display: none;">
+            <div class="myavatar"><img src="" id="avatar" alt=""></div>
+            <div class="p-username"></div>
+        </div>
+        <div class="givehigh">
+            <div class="three-data">
+                <div class="attention" id="p-data">
+                    <span class="num-attention" id="p-datanum">&ensp;</span>
+                    </br><span class="guanzhu">关注</span>
+                </div>
+                <div class="fans" id="p-data">
+                    <span class="num-fans" id="p-datanum">&ensp;</span></br>
+                    <span class="fensi">粉丝</span>
+                </div>
+                <div class="collect" id="p-data">
+                    <span class="num-collect" id="p-datanum">&ensp;&ensp;</span>
+                    </br><span class="shoucang">获赞和收藏</span>
+                </div>
+                <button class="edit-btn">编辑资料</button>
+            </div>
+            <div class="person-tag">
+                <span class="p-tag p-tag-current" id="notebtn">笔记<span class="notenum"></span></span>
+                <span class="p-tag" id="collectbtn">收藏<span class="collectnum"></span></span>
+                <span class="p-tag" id="zanguobtn">赞过<span class="zanguonum"></span></span>
+            </div>
+        </div>
+
+        <!-- 笔记部分 -->
+        <div class="addmyarticle mymain" id="addmyarticle">
+
+        </div>
+        <!-- 收藏部分 -->
+        <div class="addcollect mymain" id="addcollect" style="display: none;">
+
+        </div>
+        <!-- 赞过部分 -->
+        <div class="addzanguo mymain" id="addzanguo" style="display: none;">
+
+        </div>
+        <!-- 底部 -->
+        <div class="bottomfixed-box">
+            <div class="p-homepart-bottom">
+                <div class="bottomtag p-gohome">
+                    <p class="icon-b">&ensp;</p>
+                    <p> 首页</p>
+                </div>
+                <div class="bottomtag p-goto-message">
+                    <p class="icon-b">&ensp;&ensp;</p>
+                    <p>我的消息</p>
+                </div>
+                <div class="bottomtag goto-person tag-current-b">
+                    <p class="icon-b">&ensp;&ensp;</p>
+                    <p>个人中心</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 我的笔记详情 -->
+    <div class="e-myarticleall">
+
+    </div>
+    <!-- 收藏的笔记详情 -->
+    <div class="e-collectall">
+
+    </div>
+    <!--赞过的笔记详情 -->
+    <div class="e-zanguoall">
+
+    </div>
+    <!-- 关注的人 页面 -->
+    <div class="all-attention">
+        <div class="attention-top">
+            <span class="backbtn-attention"></span>
+            <span class="attention-tit">关注的人</span>
+        </div>
+        <div class="attention-main">
+
+        </div>
+    </div>
+    <!-- 粉丝页面 -->
+    <div class="all-fans">
+        <div class="fans-top">
+            <span class="backbtn-fans"></span>
+            <span class="fans-tit">粉丝</span>
+        </div>
+        <div class="fans-main">
+
+        </div>
+    </div>
+    <!-- 点赞和收藏页面 -->
+    <div class="all-shoucang">
+        <div class="shoucang-top">
+            <span class="backbtn-shoucang"></span>
+            <span class="shoucang-tit">获赞和收藏</span>
+        </div>
+        <div class="praise-main-top">
+            <span class="get-praise praise-current" id="parise-tag">获赞</span>
+            <span class="get-collect" id="parise-tag">收藏</span>
+        </div>
+        <!-- 渲染获赞 -->
+        <div class="getpraise">
+
+        </div>
+        <!-- 渲染收藏 -->
+        <div class="getcollect">
+
+        </div>
+    </div>
+    <!-- 编辑资料页面 -->
+    <div class="all-edit">
+        <div class="edit-top">
+            <span class="backbtn-edit"></span>
+            <span class="editdata ">编辑资料</span>
+        </div>
+        <!-- 头像 -->
+        <div class="e-avatar-box">
+            <img src="" alt="" class="edit-avatar">
+        </div>
+        <!-- 资料编辑 -->
+        <div class="data-concrete">
+            <div class="tosetdata">
+                <span class="property-word ">名字</span>
+                <button class="change-btn changename-btn">确定</button>
+                <input type="text" class="editnameinput" id='edit-input' placeholder="修改名称">
+                <span class="change-property change-name">></span>
+                <span class="property-value name-value"></span>
+            </div>
+        </div>
+        <div class="data-concrete">
+            <div class="tosetdata">
+                <span class="property-word">性别</span>
+                <button class="change-btn changeSex-btn">确定</button>
+                <select class="editSexinput" id="edit-input">
+                    <option value="女">女</option>
+                    <option value="男">男</option>
+
+                </select>
+                <span class="change-property change-Sex">></span>
+                <span class="property-value Sex-value"></span>
+            </div>
+        </div>
+        <div class="data-concrete">
+            <div class="tosetdata">
+                <span class="property-word">生日</span>
+                <button class="change-btn changebirth-btn">确定</button>
+                <input type="text" class="editbirthinput" id='edit-input' placeholder="修改生日">
+                <span class="change-property change-birth">></span>
+                <span class="property-value birth-value"></span>
+            </div>
+        </div>
+        <div class="data-concrete">
+            <div class="tosetdata">
+                <span class="property-word">职业</span>
+                <button class="change-btn changeprofession-btn">确定</button>
+                <input type="text" class="editprofessioninput" id='edit-input' placeholder="修改生日">
+                <span class="change-property change-profession">></span>
+                <span class="property-value profession-value"></span>
+            </div>
+        </div>
+        <div class="data-concrete">
+            <div class="tosetdata">
+                <span class="property-word">地区</span>
+                <button class="change-btn changeregion-btn">确定</button>
+                <input type="text" class="editregioninput" id='edit-input' placeholder="修改地区">
+                <span class="change-property change-region">></span>
+                <span class="property-value region-value"></span>
+            </div>
+        </div>
+        <div class="data-concrete">
+            <div class="tosetdata">
+                <span class="property-word">简介</span>
+                <button class="change-btn changBrief-btn">确定</button>
+                <input type="text" class="editBriefinput" id='edit-input' placeholder="修改地区">
+                <span class="change-property change-Brief ">></span>
+                <span class="property-value Brief-value"></span>
+            </div>
+        </div>
+        <div class="bgcimg-box">
+            <span class="bgc-property-word">背景图</span>
+            <span class="bgc-change-property">></span>
+            <img src="" alt="" class="edit-bgcimg">
+        </div>
+        <!-- 提交按钮 -->
+        <button class="all-submitbtn">保存</button>
+    </div>
+
+    <!-- 创建聊天 -->
+    <div class="create">
+        <div class="create-top">
+            <span class="message-backbtn"></span>
+            <p class="shouye">创建聊天</p>
+        </div>
+        <div class="chatterbox">
+
+        </div>
+    </div>
+    <!-- 聊天详情 -->
+    <div class="allchat">
+
+    </div>
+
+</body>
+
+</html>

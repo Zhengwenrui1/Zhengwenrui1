@@ -1,0 +1,145 @@
+.all-edit{
+    display: none;
+    position: relative;
+    margin: 0 auto;
+    width: 740px;
+    height: 1000px;
+    /* background-color: pink; */
+}
+/* 顶部设定 */
+.edit-top{
+    position: relative;
+    height: 60px;
+    width: 740px;
+    /* background-color: green; */
+}
+/* 设置返回键 */
+.backbtn-edit {
+    position: absolute;
+    left: 35px;
+    top: 20px;
+    font-family: 'icomoon';
+    font-size: 32px;
+    color: #4e4e4e;
+}
+/* 编辑资料标题 */
+.editdata{
+    position: absolute;
+    left: 300px;
+    top: 10px;
+    font-size: 32px;
+    color: #495775;
+}
+/* 头像所在盒子 */
+.e-avatar-box{
+    position: relative;
+    width: 740px;
+    height: 190px;
+    /* background-color: skyblue; */
+}
+/* 设置头像图片 */
+.edit-avatar{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    top: 40px;
+    left: 295px;
+}
+/* 具体资料设置 */
+.data-concrete{
+    width: 740px;
+    height: 50px;
+    border-top:1pt solid #dcdcdc ;
+    border-top:1pt solid #dcdcdc ;
+    /* background-color: pink; */
+}
+/* 每一栏的设置 */
+.property-word{
+    float: left;
+    height: 40px;
+    width: 100px;
+    line-height: 40px;
+    color: #7a7b7c;
+    font-size: 20px;
+    text-align: center;
+}
+.change-property{
+    float: right;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    color: #dcdcdc;
+    font-size: 26px;
+    text-align: center;
+}
+.property-value{
+    float: right;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+}
+/* 背景图盒子 */
+.bgcimg-box{
+    width: 740px;
+    height: 100px;
+    /* background-color: green; */
+    line-height: 100px;
+}
+.bgc-property-word{
+    float: left;
+    height: 100px;
+    width: 100px;
+    line-height: 100px;
+    color: #7a7b7c;
+    font-size: 20px;
+    text-align: center;
+}
+.bgc-change-property{
+    float: right;
+    height: 100px;
+    width: 40px;
+    line-height:100px;
+    color: #dcdcdc;
+    font-size: 26px;
+    text-align: center;
+}
+.edit-bgcimg{
+    float:right;
+    height: 80px;
+    width: 80px;
+    margin-top: 10px;
+}
+/* 修改资料输入框 */
+#edit-input{
+    display: none;
+    float: right;
+    margin-top: 5px;
+    margin-right: 5px;
+    height: 40px;
+}
+/* 确定修改按钮 */
+.change-btn{
+    display: none;
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    height: 30px;
+    width: 50px;
+}
+.changeBrief-btn{
+    display: none;
+}
+/* 设置提交按钮 */
+.all-submitbtn{
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    width: 700px;
+    height: 50px;
+    border-radius: 20px;
+    /* background-color: pink; */
+    color: #fff;
+    font-weight: 700;
+    font-size: 22px;
+}

@@ -1,0 +1,175 @@
+.all-write {
+    display: none;
+    position: relative;
+    margin: 0 auto;
+    width: 780px;
+    height: 1000px;
+    /* background-color: skyblue; */
+}
+
+/* 顶部的放回按钮 */
+.write-top {
+    position: relative;
+    height: 50px;
+    width: 780px;
+}
+
+.backbtn {
+    position: absolute;
+    left: 35px;
+    top: 20px;
+    font-family: 'icomoon';
+    font-size: 28px;
+    color: #4e4e4e;
+}
+
+/* 设置添加图片的按钮 */
+.add-pic {
+    display: flex;
+    justify-self: start;
+    flex-wrap: wrap;
+}
+
+.pic-box {
+    float: left;
+    margin: 32px 15px 35px 30px;
+    width: 140px;
+    height: 140px;
+    background-color: #f5f5f5;
+    font-size: 100px;
+    text-align: center;
+    color: #a2a2a2;
+}
+
+/* 添加图片预览 */
+.pic-preview {
+    width: 140px;
+    height: 140px;
+    margin: 32px 15px 35px 15px;
+}
+.todelete{
+    width: 540px;
+    display: flex;
+    justify-content: left;
+    flex-wrap:wrap;
+}
+
+/* 添加标题部分 */
+.add-tit {
+    margin: 15px 15px 10px 30px;
+    padding-bottom: 25px;
+    width: 750px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    border-bottom: #cdcecf solid 1px;
+}
+.preview-box{
+    position: relative;
+}
+/* 删除键设置 */
+.delete {
+    position: absolute;
+    top: 35px;
+    right: 18px;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    background-color: brown;
+    text-align: center;
+    font-size: 12px;
+}
+
+#add-main::placeholder,
+.add-tit::placeholder {
+    color: #cdcecf;
+}
+
+/* 添加正文部分 */
+#add-main {
+    margin: 15px 15px 0px 30px;
+    height: 150px;
+    border: none;
+    outline: none;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+/* #话题 @用户  两个部分 */
+.twosmall-tag-box {
+    display: flex;
+    justify-content: flex-start;
+    margin: 5px 0px 10px 30px;
+    padding-bottom: 20px;
+    width: 740px;
+    border-bottom: #cdcecf solid 0.5px;
+}
+
+.small-tag {
+    height: 25px;
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+    margin-right: 15px;
+    box-shadow: 1px 1px 1px #a2a2a2;
+}
+
+/* 添加话题标签部分 */
+.atag{
+    /* margin: 15px 15px 10px 30px; */
+    padding-bottom: 25px;
+    width: 730px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: #a062d4;
+    border-bottom: #efefef solid 1px;
+}
+.jinhao{
+    /* margin: 0px 0px 10px 30px; */
+    margin-left: 25px;
+    padding-bottom: 25px;
+    font-size: 22px;
+    color: #a062d4;
+}
+.u-atag{
+    /* margin: 0px 0px 10px 10px; */
+    padding-bottom: 25px;
+    width: 730px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: green;
+    border-bottom: #efefef solid 1px;
+}
+/* 添加#标签 */
+.addtopic{
+    float: right;
+    font-size: 25px;
+    color: #a062d4;
+    cursor: pointer;
+}
+
+.guanbi-topic{
+    float: right;
+    font-size: 25px;
+    color: #a062d4;
+}
+/* 发布笔记 */
+.send-note {
+    position: fixed;
+    bottom: 10px;
+    margin-left: 10px;
+    width: 730px;
+    height: 45px;
+    border-radius: 80px;
+    font-size: 30px;
+    color: #fff;
+    background-color: #a062d4;
+    border: none;
+}
+
+.uploadpic {
+    width: 100px;
+    height: 50px;
+}

@@ -1,0 +1,130 @@
+.all-comment {
+    display: none;
+    position: relative;
+    margin: 0 auto;
+    width: 740px;
+    height: 950px;
+    /* background-color: #01847f; */
+}
+
+.chatting,
+.robot-chatting {
+
+    position: relative;
+    margin: 0 auto;
+    width: 740px;
+    height: 950px;
+    /* background-color: #01847f; */
+}
+
+/* 顶部 */
+.comment-top,
+.chatting-top {
+    position: fixed;
+    top: 0px;
+    position: relative;
+    height: 50px;
+    width: 740px;
+    margin-bottom: 20px;
+    /* background-color: skyblue; */
+}
+
+/* 返回键 */
+.backbtn-comment,
+.chatting-backbtn,
+.robot-chatting-backbtn {
+    position: absolute;
+    left: 35px;
+    top: 20px;
+    font-family: 'icomoon';
+    font-size: 28px;
+    color: #4e4e4e;
+}
+
+.comment-tit {
+    position: absolute;
+    top: 15px;
+    left: 280px;
+    color: #626262;
+    font-size: 24px;
+}
+
+/* 聊天详情 */
+.chatting {
+    overflow-y: auto;
+    padding: 0 10px;
+    /* display: none; */
+    position: relative;
+    margin: 0 auto;
+    width: 740px;
+}
+.chatting::-webkit-scrollbar {
+    width: 0 !important
+}
+
+.chatinput {
+    position: absolute;
+    left: 5px;
+    width: 620px;
+    height: 60px;
+    bottom: 5px;
+    border-radius: 15px;
+}
+
+.bottombox{
+    position: fixed;
+    bottom: 5px;
+    width: 740px;
+    height: 70px;
+}
+.sent-chat {
+    position: absolute;
+    right: 5px;
+
+}
+.message_box{
+    width: 740px;
+    height: 100px;
+    display: block;
+}
+
+.chattinginput,
+.robot-chattinginput {
+    padding-left: 10px;
+    position: absolute;
+    font-size: 18px;
+    bottom: 5px;
+    left: 5px;
+    width: 570px;
+    height: 45px;
+    border-radius: 30px;
+}
+
+.chatting-sent,
+.robot-chatting-sent {
+    position: absolute;
+    bottom: 8px;
+    right: 5px;
+    width: 140px;
+    height: 45px;
+    border-radius: 20px;
+}
+
+/* 聊天内容 */
+.message_box {
+    margin-bottom: 30px;
+}
+
+.message_conten {
+    height: 40px;
+    background-color: skyblue;
+    padding: 10px;
+}
+
+.message_avatar {
+    margin-right: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+
+}

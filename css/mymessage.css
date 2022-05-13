@@ -1,0 +1,93 @@
+.all-mymessage {
+    display: none;
+    position: relative;
+    margin: 0 auto;
+    width: 740px;
+    height: 1200px;
+    /* background-color: #01847f; */
+}
+
+/* 消息-顶部 */
+.mymessage-top {
+    position: relative;
+    height: 80px;
+    width: 740px;
+    /* background-color: skyblue; */
+}
+
+/* 返回键 */
+.backbtn-mymessage,.back-article
+,#back-article {
+    font-family: 'icomoon';
+    position: absolute;
+    left: 35px;
+    top: 20px;
+    font-size: 28px;
+    color: #4e4e4e;
+}
+
+/* 消息 */
+.mymessage-tit {
+    position: absolute;
+    top: 10px;
+    left: 320px;
+    color: #626262;
+    font-size: 28px;
+}
+
+/* 创建聊天 */
+.createchat {
+    float: right;
+    margin-top: 20px;
+    margin-right: 15px;
+    color: #626262;
+    font-size: 20px;
+}
+
+/* 中间三个按钮 */
+.mymessage-tag {
+    display: flex;
+    justify-content: space-around;
+    width: 740px;
+    height: 110px;
+    /* background-color: blue; */
+}
+
+.each-mymessage-tag {
+    width: 120px;
+    height: 110px;
+    /* background-color: green; */
+}
+
+/* 三个tag共同样式 */
+#icon-message {
+    font-family: 'icomoon';
+    display: block;
+    font-size: 35px;
+    width: 120px;
+    height: 80px;
+    line-height: 100px;
+    text-align: center;
+}
+
+#tagword-message {
+    display: block;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    color: #a4a3a2;
+    font-size: 20px;
+}
+
+/* 三个tag不同样式 */
+.heart {
+    color: #ed7370;
+}
+
+.newattention {
+    color: #5690f3;
+}
+
+.comment {
+    color: #59ce9e;
+}

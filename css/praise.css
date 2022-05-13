@@ -1,0 +1,140 @@
+.all-shoucang {
+    display: none;
+    position: relative;
+    margin: 0 auto;
+    width: 740px;
+    height: 1000px;
+    /* background-color: pink; */
+}
+
+/* 关注的人-顶部 */
+.shoucang-top {
+    position: relative;
+    height: 50px;
+    width: 740px;
+    /* background-color: skyblue; */
+}
+
+/* 返回键 */
+.backbtn-shoucang,
+.message-backbtn {
+    position: absolute;
+    left: 35px;
+    top: 20px;
+    font-family: 'icomoon';
+    font-size: 33px;
+    color: #4e4e4e;
+}
+
+/* 获赞收藏标题 */
+.shoucang-tit {
+    position: absolute;
+    top: 15px;
+    left: 280px;
+    color: #626262;
+    font-size: 33px;
+}
+
+/* 中间部分 */
+.praise-main-top {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    width: 740px;
+    height: 60px;
+    /* background-color: green; */
+}
+
+#parise-tag {
+    height: 60px;
+    line-height: 60px;
+    font-size: 28px;
+    /* color: #544d53; */
+
+}
+
+/* 点击当前tag */
+.praise-current {
+    padding-bottom: 15px;
+    color: #a56bd6;
+    border-bottom: #a56bd6 solid;
+}
+
+/* 渲染每一个点赞我的人 */
+
+/* 点赞的人盒子 */
+.getpraise,
+.reviewme {
+    margin: 0 auto;
+    width: 740px;
+    height: 800px;
+    /* background-color: pink; */
+    margin-top: 30px;
+    overflow-y: auto;
+}
+
+.getcollect {
+    display: none;
+    margin: 0 auto;
+    width: 740px;
+    height: 800px;
+    /* background-color: pink; */
+    margin-top: 30px;
+    overflow-y: auto;
+}
+
+/* 具体每一个点赞的用户渲染 */
+.eachpraise {
+    position: relative;
+    width: 740px;
+    height: 90px;
+    padding: 10px 0 10px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+/* 图片 */
+.praiser-avatar {
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+}
+
+/* 用户昵称 */
+.praiser-name {
+    position: absolute;
+    display: block;
+    top: 30px;
+    left: 130px;
+    font-size: 22px;
+}
+
+.praise-words {
+    position: absolute;
+    display: block;
+    top: 60px;
+    left: 130px;
+    font-size: 20px;
+    color: #b8b8b8;
+}
+
+/* 文章图片预览 */
+.praise-artimg {
+    position: absolute;
+    right: 50px;
+    top: 15px;
+    width: 80px;
+    height: 80px;
+}
+
+.praise-right {
+    position: absolute;
+    right: 15px;
+    height: 90px;
+    line-height: 90px;
+    font-size: 30px;
+    color: #b8b8b8;
+}

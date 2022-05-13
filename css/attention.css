@@ -1,0 +1,33 @@
+.all-attention{
+    display: none;
+    position: relative;
+    margin: 0 auto;
+    width: 740px;
+    height: 1000px;
+    /* background-color: pink; */
+}
+/* 关注的人-顶部 */
+.attention-top{
+    position: relative;
+    height: 50px;
+    width: 740px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    /* background-color: skyblue; */
+}
+/* 返回键 */
+.backbtn-attention{
+    position: absolute;
+    left: 35px;
+    top: 20px;
+    font-family: 'icomoon';
+    font-size: 28px;
+    color: #4e4e4e;
+}
+.attention-tit{
+    position: absolute;
+    top: 15px;
+    left: 320px;
+    color: #626262;
+    font-size: 28px;
+}
